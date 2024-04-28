@@ -1,0 +1,5 @@
+Split 1
+Zagreb 1
+Munchen 5
+Zadar 1
+Bec 7

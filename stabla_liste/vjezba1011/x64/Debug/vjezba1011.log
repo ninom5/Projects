@@ -1,0 +1,6 @@
+﻿  aaaaaaaaaaaaaaaaaaaaaaaaa.c
+C:\Users\Korisnik\source\repos\vjezba1011\vjezba1011\aaaaaaaaaaaaaaaaaaaaaaaaa.c(94,3): warning C4047: 'return': 'Position' differs in levels of indirection from 'int'
+C:\Users\Korisnik\source\repos\vjezba1011\vjezba1011\aaaaaaaaaaaaaaaaaaaaaaaaa.c(152,3): warning C4047: 'return': 'Pozicija' differs in levels of indirection from 'int'
+C:\Users\Korisnik\source\repos\vjezba1011\vjezba1011\aaaaaaaaaaaaaaaaaaaaaaaaa.c(172,3): warning C4047: 'return': 'Position' differs in levels of indirection from 'int'
+C:\Users\Korisnik\source\repos\vjezba1011\vjezba1011\aaaaaaaaaaaaaaaaaaaaaaaaa.c(178,20): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  vjezba1011.vcxproj -> C:\Users\Korisnik\source\repos\vjezba1011\x64\Debug\vjezba1011.exe

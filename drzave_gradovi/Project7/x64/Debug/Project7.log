@@ -1,0 +1,11 @@
+﻿  a.c
+C:\Users\Korisnik\source\repos\Project7\Project7\a.c(79,3): warning C4047: 'return': 'int' differs in levels of indirection from 'void *'
+C:\Users\Korisnik\source\repos\Project7\Project7\a.c(89,4): warning C4047: 'return': 'int' differs in levels of indirection from 'void *'
+C:\Users\Korisnik\source\repos\Project7\Project7\a.c(134,3): warning C4047: 'return': 'int' differs in levels of indirection from 'void *'
+C:\Users\Korisnik\source\repos\Project7\Project7\a.c(144,4): warning C4047: 'return': 'int' differs in levels of indirection from 'void *'
+C:\Users\Korisnik\source\repos\Project7\Project7\a.c(177,32): warning C4047: '=': 'PositionTown' differs in levels of indirection from 'int'
+C:\Users\Korisnik\source\repos\Project7\Project7\a.c(184,3): warning C4047: 'return': 'int' differs in levels of indirection from 'PositionTown'
+C:\Users\Korisnik\source\repos\Project7\Project7\a.c(186,14): warning C4047: '=': 'PositionTown' differs in levels of indirection from 'int'
+C:\Users\Korisnik\source\repos\Project7\Project7\a.c(188,15): warning C4047: '=': 'PositionTown' differs in levels of indirection from 'int'
+C:\Users\Korisnik\source\repos\Project7\Project7\a.c(190,2): warning C4047: 'return': 'int' differs in levels of indirection from 'PositionTown'
+  Project7.vcxproj -> C:\Users\Korisnik\source\repos\Project7\x64\Debug\Project7.exe
