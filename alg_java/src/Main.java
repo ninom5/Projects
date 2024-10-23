@@ -2,7 +2,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 class DartGame {
-    public static int wuhu(int res) {
+    public static int reduceScore(int res) {
         Random rand = new Random();
 
         int comb = 0;
@@ -41,12 +41,12 @@ class DartGame {
         return res;
     }
 
-    public static int k(int uk) {
+    public static int findCombination(int uk) {
         Random rand = new Random();
-        int r = 0;
-        int wtf = 0;
+        int found = 0;
+        int currentSum = 0;
 
-        while (r == 0) {
+        while (found == 0) {
             int num1 = rand.nextInt(22);
             if (num1 == 21)
                 num1 = 25;
@@ -61,17 +61,17 @@ class DartGame {
                 for (int i = 1; i <= 3; i++) {
                     for (int j = 1; j <= 3; j++) {
                         for (int z = 1; z <= 3; z++) {
-                            wtf = num1 * i + num2 * j + num3 * z;
-                            if (wtf == uk) {
+                            currentSum = num1 * i + num2 * j + num3 * z;
+                            if (currentSum == uk) {
                                 System.out.printf("Combination: %d * %d + %d * %d + %d * %d = %d\n", num1, i, num2, j, num3, z, uk);
-                                r = 1;
+                                found = 1;
                                 break;
                             }
                         }
-                        if (r == 1)
+                        if (found == 1)
                             break;
                     }
-                    if (r == 1)
+                    if (found == 1)
                         break;
                 }
             } else {
@@ -79,17 +79,17 @@ class DartGame {
                     for (int i = 1; i <= (num1 == 25 ? 2 : 3); i++) {
                         for (int j = 1; j <= (num2 == 25 ? 2 : 3); j++) {
                             for (int k = 1; k <= (num3 == 25 ? 2 : 3); k++) {
-                                wtf = num1 * i + num2 * j + num3 * k;
-                                if (wtf == uk) {
+                                currentSum = num1 * i + num2 * j + num3 * k;
+                                if (currentSum == uk) {
                                     System.out.printf("Combination: %d * %d + %d * %d + %d * %d = %d\n", num1, i, num2, j, num3, k, uk);
-                                    r = 1;
+                                    found = 1;
                                     break;
                                 }
                             }
-                            if (r == 1)
+                            if (found == 1)
                                 break;
                         }
-                        if (r == 1)
+                        if (found == 1)
                             break;
                     }
                 }
@@ -107,17 +107,16 @@ class DartGame {
         Random rand = new Random();
         rand.setSeed(System.currentTimeMillis());
         if (res <= 60) {
-            res = wuhu(res);
+            res = reduceScore(res);
         } else if (res > 60 && res < 120) {
             while (res != 0) {
                 int temp = 3 * 20;
                 res -= temp;
                 System.out.println("triple 20");
-                res = wuhu(res);
+                res = reduceScore(res);
             }
         } else {
-            k(res);
+            findCombination(res);
         }
     }
 }
-

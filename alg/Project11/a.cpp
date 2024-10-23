@@ -4,8 +4,8 @@
 
 using namespace std;
 
-int wuhu(int res);
-int k(int res);
+int reduceScore(int res);
+int findCombination(int res);
 
 int main()
 {
@@ -15,7 +15,7 @@ int main()
 	srand(time(NULL));
 	if (res <= 60)
 	{
-		res = wuhu(res);
+		res = reduceScore(res);
 	}
 	else if (res > 60 && res < 120)
 	{
@@ -24,17 +24,17 @@ int main()
 			int temp = 3*20;
 			res -= temp;
 			cout << "triple 20" << endl;
-			res = wuhu(res);
+			res = reduceScore(res);
 		}
 	}
 	else
 	{
-		k(res);
+		findCombination(res);
 	}
 
 	return 0;
 }
-int wuhu(int res)
+int reduceScore(int res)
 {
 	srand(time(NULL));
 
@@ -86,13 +86,13 @@ int wuhu(int res)
 	}
 	return res;
 }
-int k(int uk)
+int findCombination(int uk)
 {
 	int i;
-	int r = 0;
-	int wtf = 0;
+	int found = 0;
+	int currentSum = 0;
 	srand(time(NULL));
-	while (!r)
+	while (!found)
 	{
 		int num1 = rand() % 22;
 		if (num1 == 21)
@@ -111,18 +111,18 @@ int k(int uk)
 				{
 					for (int z = 1; z <= 3; z++)
 					{
-						wtf = num1 * i + num2 * j + num3 * z;
-						if (wtf == uk)
+						currentSum = num1 * i + num2 * j + num3 * z;
+						if (currentSum == uk)
 						{
-							printf("uspjesno Combination: %d * %d + %d * %d + %d * %d = %d\n", num1, i, num2, j, num3, z, uk);
-							r = 1;
+							cout << ("uspjesno Combination: %d * %d + %d * %d + %d * %d = %d\n", num1, i, num2, j, num3, z, uk) << endl;
+							found = 1;
 							break;
 						}
 					}
-					if (r)
+					if (found)
 						break;
 				}
-				if (r)
+				if (found)
 					break;
 			}
 		}
@@ -134,14 +134,14 @@ int k(int uk)
 						for (int k = 1; k <= (num3 == 25 ? 2 : 3); ++k) {
 							int wtf = num1 * i + num2 * j + num3 * k;
 							if (wtf == uk) {
-								printf("Combination: %d * %d + %d * %d + %d * %d = %d\n", num1, i, num2, j, num3, k, uk);
-								r = 1;
+								cout << ("Combination: %d * %d + %d * %d + %d * %d = %d\n", num1, i, num2, j, num3, k, uk) << endl;
+								found = 1;
 								break;
 							}
 						}
-						if (r) break;
+						if (found) break;
 					}
-					if (r) break;
+					if (found) break;
 				}
 			}
 		}
